@@ -6,7 +6,7 @@ import IMG from "../../asset/background.jpg";
 import Logo from "../../asset/Logo.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import userInstance from "../../axios_interceptor/userAxios";
 
 const validationSchema = Yup.object().shape({
@@ -108,13 +108,13 @@ const Login = () => {
                     </div>
 
                     <div className="flex items-center justify-between mb-8">
-                      <a
-                        href="#"
+                      <Link
+                       to={"/forgotten"}
                         className="text-sm text-[#E64D67] hover:underline"
-                        onClick={()=>navigate("/forgotten")}
+                   
                       >
                         Forgot Password?
-                      </a>
+                      </Link>
                     </div>
 
                     <button
